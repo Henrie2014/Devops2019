@@ -3,6 +3,10 @@ pipeline {
   tools {
      maven 'M2_HOME' 
   }
+  environment {
+    registry = "kserge2001/devops-pipeline"
+    registrycredential = 'dockerhub'
+  }
   stages {
     stage('Build'){
       steps {
